@@ -2,12 +2,41 @@
 {
     public class User
     {
-        private Guid _id { get; set; }
-        private string _name { get; set; }
-        private string _email { get; set; }
-        private string _password { get; set; }
-        private string Gender { get; set; }
-        private string CreatedDate {  get; set; }
-            
+        private Guid _id;
+        private string _name;
+        private string _email;
+        private string _password;
+        private string _gender;
+
+        public User()
+        {
+            _id = Guid.NewGuid();
+        }
+        public Guid Id
+        {
+            get { return _id; }
+        }
+
+        public string Name
+        {
+            get { return _name; }
+            set { _name = value; }
+        }
+        public string Email
+        {
+            get { return _email; }
+            set { _email = value; }
+        }
+        public string Password
+        {
+            get { return _password; }
+            set { _password = value; }
+        }
+        public string Gender
+        {
+            get { return _gender; }
+            set { _gender = value; }
+        }
+
     }
 }

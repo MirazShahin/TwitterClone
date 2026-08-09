@@ -9,6 +9,12 @@ namespace TwitterClone.Domain.Entities
         private User _followingUser;
         private DateTime _followingAt;
         
+        public Follow(Guid followerId, Guid followingId)
+        {
+            _id = Guid.NewGuid();
+            _followerId = followerId;
+            _followingId = followingId;
+        }
         public Guid Id
         {
             get { return _id; }

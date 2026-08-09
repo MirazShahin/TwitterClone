@@ -11,6 +11,13 @@ namespace TwitterClone.Domain.Entities
         private Tweet _orginalTweet;
         private DateTime _retweetAt;
 
+        public Retweet(Guid userId, Guid orginalTweetId)
+        {
+            _id = Guid.NewGuid();
+            _userId = userId;
+            _orginalTweetId = orginalTweetId;
+
+        }
         public Guid Id
         {
             get { return _id; }

@@ -9,6 +9,11 @@ namespace TwitterClone.Domain.Entities
         private Guid _actorId;
         private DateTime _notificationTime;
 
+        public Notification(Guid actorId)
+        {
+            _id = Guid.NewGuid();
+            _actorId = actorId;
+        }
         public Guid Id
         {
             get { return _id; }
