@@ -11,6 +11,12 @@ namespace TwitterClone.Domain.Entities
         private Guid _tweetId;
         private Tweet _tweet;
 
+        public Bookmark(Guid UserId, Guid TweetId)
+        {
+            _id = Guid.NewGuid();
+            _userId = UserId;
+            _tweetId = TweetId;
+        }
         public Guid Id
         {
             get {  return _id; }

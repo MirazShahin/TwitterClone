@@ -17,6 +17,13 @@ namespace TwitterClone.Domain.Entities
         private User _receiver;
         private DateTime _sendingAt;
 
+        public Message(Guid senderId, Guid receiverId)
+        {
+            _id = Guid.NewGuid();
+            _senderId = senderId;
+            _receiverId = receiverId;
+        }
+
         public Guid Id
         {
             get { return _id; }
